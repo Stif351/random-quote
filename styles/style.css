@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backgruond-body: #20293A;
+    --backgruond-quote: #4A5567;
+    --quote-button: #AEB0FF;
+    --text: #E3E8EF;
+    --header-color: #111729;
+    --link-footer:#284bce;
+
+}
+@font-face {
+    font-family: 'Outfit', sans-serif;
+    src: url(../fonts/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--backgruond-body);
+}
+
+
+
+/* ================  FOOTER  ============== */
+
+footer {
+    max-width: 275px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    color: var(--text);
+}
+
+.attribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.attribution p {
+    font-weight: 600;
+}
+
+.attribution a {
+    font-style: italic;
+    text-decoration: none;
+    color: var(--link-footer);
+}
