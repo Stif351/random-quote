@@ -108,6 +108,12 @@ body {
     color: var(--text);
     height: 42px;
     background-color: var(--backgruond-quote);
+    transition: 1.6s;
+}
+.btn-item:hover {
+    background-color: var(--quote-button);
+    color: var(--header-color);
+
 }
 
 /* ================  FOOTER  ============== */
