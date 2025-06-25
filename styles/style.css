@@ -25,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Outfit', sans-serif;
-color: var(--text);
+    color: var(--text);
     height: 100vh;
     background-color: var(--header-color);
 }
@@ -34,8 +34,8 @@ color: var(--text);
     display: flex;
     max-width: 388px;
     width: 100%;
-    height: 212px;
-background-image: url("../resources/bg-image-random-quote.svg");
+    min-height: 212px;
+    background-image: url("../resources/bg-image-random-quote.svg");
     border-radius: 20px;
     padding: 36px 32px 0 32px;
     margin: 0 10px;
@@ -45,23 +45,31 @@ background-image: url("../resources/bg-image-random-quote.svg");
 .quote-box {
     max-width: 316px;
     width: 100%;
-    height: 140px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
-    /*background-color: aqua;*/
 }
-.title{
+.quote-text::after {
+    content: '" ';
+}
+.quote-text::before {
+    content: ' "';
+}
+
+.title {
     font-size: 16px;
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 8px;
     margin-top: 8px;
 }
-.btn{
+
+.btn {
     font-size: 10px;
     border-radius: 50px;
     height: 21px;
@@ -70,19 +78,23 @@ background-image: url("../resources/bg-image-random-quote.svg");
     border: 1px solid var(--quote-button);
     background: transparent;
 }
-.quote-text{
+
+.quote-text {
+    height: auto;
     margin-top: 20px;
     font-size: 22px;
     text-align: center;
 }
-.btn-change{
+
+.btn-change {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
     margin-top: 16px;
 }
-.btn-item{
+
+.btn-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,12 +102,14 @@ background-image: url("../resources/bg-image-random-quote.svg");
     padding: 16px;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
     color: var(--text);
     height: 42px;
     background-color: var(--backgruond-quote);
 }
+
 /* ================  FOOTER  ============== */
 
 footer {
@@ -133,22 +147,24 @@ footer {
         width: 100%;
         padding: 36px 52px 0 52px;
     }
+
     .quote-box {
         width: 400px;
-        height: 140px;
+        height: auto;
     }
 }
 
-@media screen  and (min-width: 1023px)  {
+@media screen  and (min-width: 1023px) {
 
     .wrapper {
         max-width: 504px;
         width: 100%;
         padding: 36px 52px 0 52px;
     }
+
     .quote-box {
         width: 400px;
-        height: 140px;
+        height: auto;
     }
 }
 
